@@ -54,6 +54,16 @@ while True:
             "Vaccine Status": user_vaccstat
         }
         
+        print("*****************************")
+        print()
+        print("************MENU*************")
+        print()
+        print("     1 -> Add an item")
+        print("     2 -> Search")
+        print("     3 -> Exit")
+        print()
+        print("*****************************")
+        print()
         input_of_user2 = int(input("What do you want to do? (Choose 1-3): "))
         print("*****************************")
         print()
@@ -66,7 +76,28 @@ while True:
                 print("**********USER INFO**********")
                 print()
                 print(user_info)
+                print()
                 print("*****************************")
             else:
                 print("*****************************")
                 print("!Invalid User Name!")
+                
+        print("*****************************")
+        print()
+        print("************MENU*************")
+        print()
+        print("     1 -> Add an item")
+        print("     2 -> Search")
+        print("     3 -> Exit")
+        print()
+        print("*****************************")
+        print()
+        input_of_user3 = int(input("What do you want to do? (Choose 1-3): "))
+        print("*****************************")
+        print()
+        
+        #codings for option 3
+        if input_of_user3 == 3:
+            user_yes_no = input("Do you want to Exit? (Yes/No): ")
+            if user_yes_no == "Yes":
+                break
