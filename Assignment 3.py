@@ -17,6 +17,7 @@ print()
 while True:
     #Ask user what to do
     input_of_user = int(input("What do you want to do? (Choose 1-3): "))
+    print()
     print("*****************************")
     print()
 
@@ -54,7 +55,6 @@ while True:
             "Vaccine Status": user_vaccstat
         }
         
-        print("*****************************")
         print()
         print("************MENU*************")
         print()
@@ -64,40 +64,42 @@ while True:
         print()
         print("*****************************")
         print()
-        input_of_user2 = int(input("What do you want to do? (Choose 1-3): "))
+        input_of_user = int(input("What do you want to do? (Choose 1-3): "))
+        print()
         print("*****************************")
         print()
         
         #codings for option 2
-        if input_of_user2 == 2: 
+        if input_of_user == 2: 
             user_fullName2 = input("Enter your Fullname. \n Full Name: ")
+            print()
             if user_fullName == user_fullName2:
-                print()
                 print("**********USER INFO**********")
                 print()
-                print(user_info)
-                print()
-                print("*****************************")
+                for  key, value in user_info.items():   
+                    print(key, ":", value)
             else:
                 print("*****************************")
                 print("!Invalid User Name!")
+            
+            print()   
+            print("*****************************")
+            print()
+            print("************MENU*************")
+            print()
+            print("     1 -> Add an item")
+            print("     2 -> Search")
+            print("     3 -> Exit")
+            print()
+            print("*****************************")
+            print()
+            input_of_user = int(input("What do you want to do? (Choose 1-3): "))
+            print()
+            print("*****************************")
+            print()
                 
-        print("*****************************")
-        print()
-        print("************MENU*************")
-        print()
-        print("     1 -> Add an item")
-        print("     2 -> Search")
-        print("     3 -> Exit")
-        print()
-        print("*****************************")
-        print()
-        input_of_user3 = int(input("What do you want to do? (Choose 1-3): "))
-        print("*****************************")
-        print()
-        
         #codings for option 3
-        if input_of_user3 == 3:
+        if input_of_user == 3:
             user_yes_no = input("Do you want to Exit? (Yes/No): ")
             if user_yes_no == "Yes":
                 break
