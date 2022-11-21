@@ -17,6 +17,8 @@ print()
 print(Fore.CYAN + "*****************************")
 print()
 
+all_info = {}
+
 while True:
     #Ask user what to do
     input_of_user = int(input(Fore.WHITE + "What do you want to do? (Choose 1-3): "))
@@ -58,6 +60,8 @@ while True:
             "Vaccine Status": user_vaccstat
         }
         
+        all_info[user_fullName] = user_info
+        
         print()
         print(Fore.MAGENTA + "************MENU*************")
         print()
@@ -76,10 +80,11 @@ while True:
         if input_of_user == 2: 
             user_fullName2 = input(Fore.WHITE + "Enter your Fullname. \n Full Name: ")
             print()
-            if user_fullName == user_fullName2:
+            if user_fullName2 in all_info:
                 print(Fore.BLUE + "**********USER INFO**********")
                 print()
-                for  key, value in user_info.items():   
+                search_data = all_info[user_fullName2]
+                for  key, value in search_data.items():   
                     print(Fore.BLUE + key, ":", value)
             else:
                 print(Fore.CYAN + "*****************************")
